@@ -9,18 +9,27 @@ var paths = {
 }
 
 module.exports = {
-  entry: path.join(paths.src, 'js/entry.js'),
+  entry: path.join(paths.src, 'js/entry'),
   output: {
     path: path.join(paths.dist, 'js/'),
     filename: 'build.js',
     library: 'app'
   },
   resolve: {
-    extensions: ['', '.js', '.pug', '.scss']
+    extensions: ['', '.js', '.jsx', '.pug', '.scss']
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, include: paths.src, loader: 'babel?cacheDirectory&presets[]=es2015' }
+      {
+        test: /\.jsx?$/,
+        include: paths.src,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          cacheDirectory: true,
+          presets: ['es2015', 'react']
+        }
+      }
     ]
   }
 }
