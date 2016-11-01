@@ -3,12 +3,41 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     title Document
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css")
     link(rel="stylesheet", href="css/main.css")
     script(src="../node_modules/react/dist/react-with-addons.min.js")
   body
     sidebar
-      span.flow-text here will be comment system
+      .row
+        .col.s12
+          ul.collection.with-header
+            li.collection-header
+              blockquote "String"
+            li.collection-item.avatar
+              i.material-icons.circle folder
+              span.title title
+              p comment
+              a.secondary-content
+                i.material-icons grade
+            li.collection-item.avatar
+              i.material-icons.circle folder
+              span.title title
+              p comment
+              a.secondary-content
+                i.material-icons grade
+            li.collection-item.avatar
+              i.material-icons.circle folder
+              span.title title
+              p comment
+              a.secondary-content
+                i.material-icons grade
+            li.collection-item.avatar
+              i.material-icons.circle folder
+              span.title title
+              p comment
+              a.secondary-content
+                i.material-icons grade
     main
       .container
         .row
@@ -18,8 +47,8 @@ html(lang="en")
               textarea#textarea.materialize-textarea
               label(for="textarea") Text
             button.btn.waves-effect.waves-light submit
-            //- #hello
-            //- #clicker
+            #hello
+            #clicker
 
     script(src="https://code.jquery.com/jquery-2.2.4.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js")
