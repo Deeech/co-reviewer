@@ -1,11 +1,18 @@
 'use strict'
-import Hello from './components/Hello'
-import Clicker from './components/Clicker'
-import testModule from './moduletest'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+
 
 // Pages
-import Index from 'pages/Index'
+import Index from 'pages/Index';
 
-let i = 0
-console.log('Hello! I am an entry point!')
-testModule()
+ReactDOM.render(
+  <Router history={browserHistory}>
+    <Route path="/">
+      <IndexRoute component={ Index }/>
+      <Route path="home" component={ Index }/>
+    </Route>
+  </Router>,
+  document.getElementById('root')
+);
