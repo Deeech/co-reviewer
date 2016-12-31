@@ -5,7 +5,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 
 // Pages
-import Index from 'pages/Index';
+import Index from './pages/Index';
 
 ReactDOM.render(
   <Router history={browserHistory}>
