@@ -13,9 +13,7 @@ class Navigation extends React.Component {
             </ul>
           </div>
         </nav>
-        <div className="container">
-          { this.props.children }
-        </div>
+        { this.props.children }
       </div>
     )
   }
