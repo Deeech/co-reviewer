@@ -1,18 +1,17 @@
 import * as actionTypes from '../actionTypes/comments';
 import { get, post, del } from '../utils/api';
 
-export function addComment() {
-  return async dispatch => {
+export function addComment(comment) {
+
+  return dispatch => {
     dispatch({
       type: actionTypes.ADD_COMMENT
     });
 
     try {
-      const result = await post('/api/comments');
-
       dispatch({
         type: actionTypes.ADD_COMMENT_SUCCESS,
-        comment: result
+        comment: comment
       });
     } catch(e) {
       dispatch({
@@ -20,6 +19,24 @@ export function addComment() {
       });
     }
   }
+  // return async dispatch => {
+  //   dispatch({
+  //     type: actionTypes.ADD_COMMENT
+  //   });
+
+  //   try {
+  //     const result = await post('/api/comments');
+
+  //     dispatch({
+  //       type: actionTypes.ADD_COMMENT_SUCCESS,
+  //       comment: result
+  //     });
+  //   } catch(e) {
+  //     dispatch({
+  //       type: actionTypes.ADD_COMMENT_ERROR
+  //     });
+  //   }
+  // }
 }
 
 export function requestComments() {

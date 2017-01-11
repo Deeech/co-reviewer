@@ -1,6 +1,11 @@
 import * as actionTypes from '../actionTypes/comments';
 
-const DEFAULT_STATE = [];
+const DEFAULT_STATE = [
+  {title: 'comment', text: 'text text text text text text text text text'},
+  {title: 'comment', text: 'text text text text text text text text text'},
+  {title: 'comment', text: 'text text text text text text text text text'},
+  {title: 'comment', text: 'text text text text text text text text text'},
+];
 
 const addComment = (state, action) => ([
   ...state,
