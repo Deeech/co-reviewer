@@ -1,3 +1,5 @@
+import { Col, Row, Button } from 'react-materialize';
+
 class Comments extends React.Component {
   render() {
     return (
@@ -10,6 +12,13 @@ class Comments extends React.Component {
             </div>
           ))
         }
+        <Row>
+          <Col s={12} className="input-field">
+            <i className="material-icons prefix">mode_edit</i>
+            <textarea className="materialize-textarea" placeholder="Place your text here..."></textarea>
+            <button className="btn right">Add comment</button>
+          </Col>
+        </Row>
       </div>
     )
   }
