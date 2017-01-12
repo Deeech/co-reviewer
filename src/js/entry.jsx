@@ -6,7 +6,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 // React/Redux
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import reducers from '../reducers';
+import reducers from './reducers';
 
 // Components
 import Navigation from './components/Navigation'
