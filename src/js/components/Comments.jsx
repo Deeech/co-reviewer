@@ -16,8 +16,14 @@ class Comments extends React.Component {
           <Col s={12} className="input-field">
             <i className="material-icons prefix">mode_edit</i>
             <textarea className="materialize-textarea" placeholder="Place your text here..."></textarea>
+          </Col>
+          <Col s={12} className="input-field">
+            <input type="text" placeholder="title" />
+          </Col>
+          <Col s={12}>
             <button className="btn right">Add comment</button>
           </Col>
+          }
         </Row>
       </div>
     )
