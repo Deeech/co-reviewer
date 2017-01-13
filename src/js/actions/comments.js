@@ -19,24 +19,6 @@ export function addComment(comment) {
       });
     }
   }
-  // return async dispatch => {
-  //   dispatch({
-  //     type: actionTypes.ADD_COMMENT
-  //   });
-
-  //   try {
-  //     const result = await post('/api/comments');
-
-  //     dispatch({
-  //       type: actionTypes.ADD_COMMENT_SUCCESS,
-  //       comment: result
-  //     });
-  //   } catch(e) {
-  //     dispatch({
-  //       type: actionTypes.ADD_COMMENT_ERROR
-  //     });
-  //   }
-  // }
 }
 
 export function requestComments() {
