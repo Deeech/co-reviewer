@@ -1,6 +1,6 @@
 import { Link, IndexLink } from 'react-router';
 
-class Navigation extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -22,4 +22,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+export default App;

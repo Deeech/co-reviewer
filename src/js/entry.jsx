@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import reducers from './reducers';
 
 // Components
-import Navigation from './components/Navigation'
+import App from './App'
 
 // Pages
 import Index from './pages/Index';
@@ -20,7 +20,7 @@ const store = createStore(reducers);
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path="/" component={ Navigation }>
+      <Route path="/" component={ App }>
         <IndexRoute component={ Text }/>
         <Route path="index" component={ Index }/>
         <Route path="text" component={ Text }/>
