@@ -36,7 +36,7 @@ class Comments extends React.Component {
     e.preventDefault();
     let form = e.target;
 
-    addComment({
+    this.props.addComment({
       title: form.querySelection('#i-title'),
       text: form.querySelection('#i-comment'),
     });
