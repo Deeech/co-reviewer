@@ -1,5 +1,6 @@
 import { Col, Row, Button } from 'react-materialize';
 import { addComment } from '../actions/comments'
+import { Comment } from './Comment'
 import { connect } from 'react-redux';
 
 class Comments extends React.Component {
@@ -8,10 +9,7 @@ class Comments extends React.Component {
       <div>
         {
           this.props.comments.map(c => (
-            <div>
-              <h4>{ c.title }</h4>
-              <p>{ c.text }</p>
-            </div>
+            <Comment comment={c} />
           ))
         }
         <form onSubmit={this.addComment.bind(this)}>
