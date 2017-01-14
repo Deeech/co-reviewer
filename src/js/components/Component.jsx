@@ -1,7 +1,7 @@
 import { Col, Row, Button } from 'react-materialize';
 import { connect } from 'react-redux';
 
-class Comments extends React.Component {
+class Comment extends React.Component {
   render() {
     return (
       <div>
