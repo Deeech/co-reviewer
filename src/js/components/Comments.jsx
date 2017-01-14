@@ -9,7 +9,7 @@ class Comments extends React.Component {
       <div>
         {
           this.props.comments.map(c => (
-            <Comment comment={c} />
+            <Comment comment={c} key={c.id} />
           ))
         }
         <form onSubmit={this.addComment.bind(this)}>
